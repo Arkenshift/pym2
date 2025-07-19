@@ -1,0 +1,111 @@
+/* style.css (Pastel Green Theme) */
+
+/* --- Theme Colors & Fonts --- */
+:root {
+    --pastel-green: #a8e6cf;
+    --dark-green: #3d8a6b;
+    --soft-black: #4A4A4A;
+    --light-bg: #f0f7f3;
+    --light-grey: #e9ecef;
+    --success-bg: #d4edda;
+    --danger-bg: #f8d7da;
+}
+
+body {
+    font-family: 'Kanit', sans-serif;
+    background-color: var(--light-bg);
+    color: var(--soft-black);
+}
+
+h1 {
+    color: var(--dark-green);
+    font-weight: 500;
+}
+
+/* --- Card & Layout --- */
+.card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+    overflow: hidden; /* ทำให้ card-header ที่เป็นสี ไม่ล้นออกมา */
+}
+
+.card-header {
+    background-color: var(--pastel-green);
+    color: var(--dark-green);
+    font-weight: 500;
+    font-size: 1.25rem;
+    border-bottom: none;
+}
+
+/* --- Buttons --- */
+.btn {
+    border-radius: 8px;
+    font-weight: 500;
+    padding: 10px 20px;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-primary {
+    background-color: var(--dark-green);
+    border-color: var(--dark-green);
+}
+
+.btn-primary:hover, .btn-primary:disabled {
+    background-color: #2a6d52;
+    border-color: #2a6d52;
+}
+
+.btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+}
+
+#restart-btn {
+    display: none; /* ซ่อนปุ่มนี้ไว้เป็นค่าเริ่มต้น */
+}
+
+
+/* --- Code Area --- */
+#code-input, pre {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: var(--light-grey);
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+}
+
+pre {
+    padding: 1rem;
+    white-space: pre-wrap; /* ทำให้โค้ดยาวๆ ตัดบรรทัดได้ */
+    word-wrap: break-word;
+}
+
+code {
+    color: #c7254e; /* สีของโค้ดในเนื้อหา */
+}
+
+
+/* --- Feedback Messages --- */
+#feedback-message {
+    padding: .75rem 1.25rem;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    margin-top: 1rem;
+}
+
+#feedback-message.correct {
+    color: #155724;
+    background-color: var(--success-bg);
+    border-color: #c3e6cb;
+}
+
+#feedback-message.incorrect {
+    color: #721c24;
+    background-color: var(--danger-bg);
+    border-color: #f5c6cb;
+}
